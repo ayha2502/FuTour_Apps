@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.syzlnnuro.futour_app.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_findout"
+            app:destination="@id/navigation_findout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_findout"
+        android:name="com.syzlnnuro.futour_app.ui.findout.FindOutFragment"
+        android:label="Find Out"
+        tools:layout="@layout/fragment_findout" >
+        <action
+            android:id="@+id/action_navigation_findout_to_navigation_favorite"
+            app:destination="@id/navigation_favorite" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.syzlnnuro.futour_app.ui.favorite.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_navigation_favorite_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.syzlnnuro.futour_app.ui.favorite.FavoriteFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
